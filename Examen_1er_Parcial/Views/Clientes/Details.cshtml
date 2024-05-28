@@ -1,0 +1,43 @@
+﻿@model Examen_1er_Parcial.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalles del Cliente";
+}
+
+<h1 class="display-4">Detalles del Cliente</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Información del Cliente</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Nombre:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nombres)</dd>
+
+            <dt class="col-sm-3">Apellido:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Apellidos)</dd>
+
+            <dt class="col-sm-3">Correo Electrónico:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Correo)</dd>
+
+            <dt class="col-sm-3">Dirección:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Direccion)</dd>
+
+            <dt class="col-sm-3">Teléfono:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Telefono)</dd>
+
+            <dt class="col-sm-3">Compañía:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Compania)</dd>
+
+            <dt class="col-sm-3">Nota:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nota)</dd>
+
+            <dt class="col-sm-3">Fecha de Registro:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.FechaRegistro)</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+</div>

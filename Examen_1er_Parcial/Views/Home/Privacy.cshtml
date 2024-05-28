@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa !important; /* Añadir !important para priorizar este estilo */
+            color: #343a40;
+            padding-top: 50px; /* Ajuste para evitar que la barra de navegación cubra el contenido */
+            margin: 0; /* Eliminar los márgenes predeterminados */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0; /* Añadir para eliminar los rellenos predeterminados */
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            margin-bottom: 0; /* Añadir para eliminar el margen inferior */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Politicas de Nuestra App de Clientes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Clientes">Servicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wa.me/+50585782055">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">@ViewData["Title"]</h1>
+        <p>En esta página, detallaremos la política de privacidad de nuestro sitio web. Puedes incluir información sobre qué datos personales recopilamos, cómo los utilizamos y compartimos, y cómo los visitantes del sitio pueden controlar o eliminar dichos datos.</p>
+        <p>Es importante tener una política de privacidad clara y transparente para garantizar la confianza de nuestros usuarios y cumplir con las regulaciones de protección de datos aplicables.</p>
+        <p>Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad, no dudes en <a href="mailto:sotelomaritza97@gmail.com">contactarnos por correo electrónico</a>.</p>
+
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 S.A Tecnología. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

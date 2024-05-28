@@ -1,0 +1,67 @@
+﻿@model Examen_1er_Parcial.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<h1 class="display-4">Editar Cliente</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label for="Nombre">Nombre:</label>
+                <input asp-for="Nombres" class="form-control" id="Nombre" />
+                <span asp-validation-for="Nombres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Apellido">Apellido:</label>
+                <input asp-for="Apellidos" class="form-control" id="Apellido" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Correo">Correo Electrónico:</label>
+                <input asp-for="Correo" class="form-control" id="Correo" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Direccion">Dirección:</label>
+                <input asp-for="Direccion" class="form-control" id="Direccion" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Telefono">Teléfono:</label>
+                <input asp-for="Telefono" class="form-control" id="Telefono" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Compania">Compañía:</label>
+                <input asp-for="Compania" class="form-control" id="Compania" />
+                <span asp-validation-for="Compania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Nota">Nota:</label>
+                <textarea asp-for="Nota" class="form-control" id="Nota" rows="3"></textarea>
+                <span asp-validation-for="Nota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="FechaRegistro">Fecha de Registro:</label>
+                <input asp-for="FechaRegistro" class="form-control" id="FechaRegistro" />
+                <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

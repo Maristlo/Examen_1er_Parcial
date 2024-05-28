@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding-top: 5px; /* Ajuste para evitar que la barra de navegación cubra el contenido */
+        }
+
+        .main-header {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+            .main-header h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                color: #007bff; /* Color azul */
+            }
+
+        .welcome-message {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+            margin-top: 50px;
+        }
+
+            .welcome-message h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #343a40; /* Color de texto oscuro */
+            }
+
+            .welcome-message p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Bienvenido a Nuestra App de Clientes</h1>
+    </header>
+    <div class="container welcome-message">
+        <h2>¡Hola, Usuario!</h2>
+        <p>Nos complace darle la bienvenida a nuestra aplicación. Estamos comprometidos en proporcionarle una experiencia excepcional.</p>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 S.A Tecnología. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
