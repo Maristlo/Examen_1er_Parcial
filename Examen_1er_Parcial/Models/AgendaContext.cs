@@ -17,9 +17,8 @@ public partial class AgendaContext : DbContext
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("server=DESKTOP-D7GITVM; database=Agenda; integrated security = true;TrustServerCertificate = True;");
+    public virtual DbSet<Empleado> Empleados { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -50,6 +49,28 @@ public partial class AgendaContext : DbContext
             entity.Property(e => e.Telefono)
                 .HasMaxLength(100)
                 .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Empleado>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Empleado__3214EC07F7918E98");
+
+            entity.ToTable("Empleado");
+
+            entity.Property(e => e.Apellidos).HasMaxLength(100);
+            entity.Property(e => e.Celular).HasMaxLength(20);
+            entity.Property(e => e.Correo).HasMaxLength(100);
+            entity.Property(e => e.Departamento).HasMaxLength(50);
+            entity.Property(e => e.Dirección).HasMaxLength(255);
+            entity.Property(e => e.FechaIngreso)
+                .HasColumnType("datetime")
+                .HasColumnName("Fecha_Ingreso");
+            entity.Property(e => e.FechaNacimiento).HasColumnName("Fecha_Nacimiento");
+            entity.Property(e => e.Municipio).HasMaxLength(50);
+            entity.Property(e => e.Nombres).HasMaxLength(100);
+            entity.Property(e => e.Profesión).HasMaxLength(100);
+            entity.Property(e => e.Puesto).HasMaxLength(100);
+            entity.Property(e => e.Teléfono).HasMaxLength(20);
         });
 
         OnModelCreatingPartial(modelBuilder);

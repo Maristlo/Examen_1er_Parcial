@@ -28,5 +28,5 @@ namespace Examen_1er_Parcial.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+    } 
 }
