@@ -70,12 +70,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="Profesión" class="control-label"></label>
-                <input asp-for="Profesión" class="form-control" />
+                <select asp-for="Profesión" class="form-control">
+                    <option value="">Seleccione una profesión</option>
+                    <option value="Ingeniero en Sistemas">Ingeniero en Sistemas</option>
+                    <option value="Ingeniero en computacion">Ingeniero en computacion"</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
                 <span asp-validation-for="Profesión" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Puesto" class="control-label"></label>
-                <input asp-for="Puesto" class="form-control" />
+                <select asp-for="Puesto" class="form-control">
+                    <option value="">Seleccione un puesto</option>
+                    <option value="Gerente">Gerente</option>
+                    <option value="Administrador">Administrador</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
                 <span asp-validation-for="Puesto" class="text-danger"></span>
             </div>
             <div class="form-group">

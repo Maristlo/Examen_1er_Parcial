@@ -34,4 +34,7 @@ public partial class Empleado
     public string? Puesto { get; set; }
 
     public string Salario { get; set; } = null!;
+  
+
 }
+

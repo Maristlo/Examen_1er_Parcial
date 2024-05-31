@@ -22,6 +22,9 @@ namespace Examen_1er_Parcial.Controllers
         // GET: Empleados
         public async Task<IActionResult> Index(string searchString, Int32? page)
         {
+            // Prepare lists for dropdowns
+           
+
             ViewData["CurrentFilter"] = searchString;
 
             var empleados = from e in _context.Empleados select e;
@@ -65,7 +68,15 @@ namespace Examen_1er_Parcial.Controllers
         // GET: Empleados/Create
         public IActionResult Create()
         {
-            return View();
+            // Preparar el modelo de vista
+            var model = new EmpleadoViewModel
+            {
+                Empleado = new Empleado(),
+                Profesiones = new List<string> { "Ingeniero", "Doctor", "Profesor", "Arquitecto" },
+                Puestos = new List<string> { "Gerente", "Supervisor", "Empleado" }
+            };
+
+            return View(model);
         }
 
         // POST: Empleados/Create
